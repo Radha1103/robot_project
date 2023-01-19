@@ -1,49 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.9.13 on win32)" generated="20230119 11:12:24.336" rpa="false" schemaversion="3">
-<suite id="s1" name="Demo11 advance" source="C:\Users\40032431\Documents\Robot_Project\Project1\Selenium_Suite\Demo11_advance.robot">
-<test id="s1-t1" name="TC4" line="34">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>browser=edge</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230119 11:12:24.797" level="INFO">Opening browser 'edge' to base url 'None'.</msg>
-<status status="PASS" starttime="20230119 11:12:24.797" endtime="20230119 11:12:26.565"/>
+<robot generator="Robot 6.0.2 (Python 3.9.13 on win32)" generated="20230119 14:16:44.452" rpa="false" schemaversion="3">
+<suite id="s1" name="Demo3" source="C:\Users\40032431\Documents\Robot_Project\Project1\Robot_suite\Demo3.robot">
+<test id="s1-t1" name="TC10" line="55">
+<kw name="Create Dictionary" library="BuiltIn">
+<var>&amp;{emp_detail}</var>
+<arg>emp_id=12345</arg>
+<arg>emp_name=Radhika</arg>
+<arg>BU=TET</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20230119 14:16:44.491" level="INFO">&amp;{emp_detail} = { emp_id=12345 | emp_name=Radhika | BU=TET }</msg>
+<status status="PASS" starttime="20230119 14:16:44.491" endtime="20230119 14:16:44.491"/>
 </kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230119 11:12:26.566" endtime="20230119 11:12:26.700"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${emp_detail}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230119 14:16:44.491" endtime="20230119 14:16:44.491"/>
 </kw>
-<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
-<arg>30s</arg>
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20230119 11:12:26.701" endtime="20230119 11:12:26.705"/>
-</kw>
-<kw name="Go To" library="SeleniumLibrary">
-<arg>url=https://nasscom.in/</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20230119 11:12:26.706" level="INFO">Opening url 'https://nasscom.in/'</msg>
-<status status="PASS" starttime="20230119 11:12:26.706" endtime="20230119 11:12:50.704"/>
-</kw>
-<kw name="Get WebElement" library="SeleniumLibrary">
-<var>${ele}</var>
-<arg>xpath=//a[text()='Members Listing']</arg>
-<doc>Returns the first WebElement matching the given ``locator``.</doc>
-<msg timestamp="20230119 11:12:50.741" level="INFO">${ele} = &lt;selenium.webdriver.remote.webelement.WebElement (session="cac8c2f4ccd6aad5fd812b6ad8bf5783", element="ebf08ad9-fa63-4b0e-9d7b-ab7d8e7200f8")&gt;</msg>
-<status status="PASS" starttime="20230119 11:12:50.705" endtime="20230119 11:12:50.741"/>
-</kw>
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>arguments[0].click()</arg>
-<arg>ARGUMENTS</arg>
-<arg>${ele}</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20230119 11:12:50.742" level="INFO">Executing JavaScript:
-arguments[0].click()
-By using argument:
-'&lt;selenium.webdriver.remote.webelement.WebElement (session="cac8c2f4ccd6aad5fd812b6ad8bf5783", element="ebf08ad9-fa63-4b0e-9d7b-ab7d8e7200f8")&gt;'</msg>
-<status status="PASS" starttime="20230119 11:12:50.742" endtime="20230119 11:12:55.352"/>
-</kw>
-<status status="PASS" starttime="20230119 11:12:24.795" endtime="20230119 11:12:55.353"/>
+<status status="PASS" starttime="20230119 14:16:44.491" endtime="20230119 14:16:44.491"/>
 </test>
-<status status="PASS" starttime="20230119 11:12:24.336" endtime="20230119 11:12:55.356"/>
+<status status="PASS" starttime="20230119 14:16:44.458" endtime="20230119 14:16:44.491"/>
 </suite>
 <statistics>
 <total>
@@ -52,7 +27,7 @@ By using argument:
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Demo11 advance">Demo11 advance</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Demo3">Demo3</stat>
 </suite>
 </statistics>
 <errors>
