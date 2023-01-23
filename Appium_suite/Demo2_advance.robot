@@ -44,7 +44,7 @@ TC5
     END
     Wait Until Page Contains Element    xpath=//*[@text='The Taj Mahal']
     Click Element    xpath=//*[@text='The Taj Mahal']
-    Page Should Contain Text        fifth 
+    Page Should Contain Text        fifth
 
 
     ${page_source}  Get Source
