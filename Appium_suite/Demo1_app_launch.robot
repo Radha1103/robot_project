@@ -80,5 +80,21 @@ TC3
     [Teardown]   Close Application
 
 
+TC4
+     Open Application    remote_url=http://localhost:4723/wd/hub
+    ...    platformName=android
+    ...    deviceName=vivo1920
+    ...     appPackage=org.khanacademy.android
+    ...     appActivity =org.khanacademy.android.ui.library.MainActivity
+    ...     noReset=true
+       Wait Until Page Contains Element    xpath=//android.widget.Button
 
 
+
+
+
+
+     ${page_source}  Get Source
+    Log To Console    ${page_source}
+    Sleep    10s
+    [Teardown]   Close Application
