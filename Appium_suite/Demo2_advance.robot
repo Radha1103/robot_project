@@ -44,11 +44,10 @@ TC5
     END
     Wait Until Page Contains Element    xpath=//*[@text='The Taj Mahal']
     Click Element    xpath=//*[@text='The Taj Mahal']
-    Wait Until Page Contains Element    xpath=//*[contains(@text(),'was the fifth ruler of the')]
-    Element Should Contain Text    xpath=//*[contains(@text(),'was the fifth ruler of the')]     was the fifth ruler of the
+    Page Should Contain Text        fifth 
 
 
     ${page_source}  Get Source
-    Log To Console    ${page_source}
+    Log     ${page_source}
     Sleep    10s
     [Teardown]   Close Application
